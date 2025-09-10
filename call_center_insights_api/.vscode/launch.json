@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Call-Center Insight",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/app.py",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/env-call-center-insights/bin/python",
+                "ENV_PATH": "/usr/local/etc/call-insight-env/.env"
+            }
+        },
+        {
+            "name": "Python: Call-Center Insight Customer Data Manager",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/customer_data_manager.py",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "ENV_PATH": "/usr/local/etc/call-insight-env/.env"
+            }
+        }
+    ]
+}

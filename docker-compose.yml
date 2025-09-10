@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Call Center Insights API
+  call-center-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: call-center-api
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_DATABASE: ${POSTGRES_DATABASE}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      SEARCH_API_HOST: ${SEARCH_API_HOST}
+      SEARCH_API_PORT: ${SEARCH_API_PORT}
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8002/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

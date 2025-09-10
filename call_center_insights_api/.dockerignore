@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+env-call-center-insights/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+app.log
+minio_download.log
+
+# Database files
+postgre/
+*.dat
+
+# Environment files (keep .env.example for container)
+.env
+.envrc
+
+# Documentation
+README_*.md
+
+# Scripts (if not needed in container)
+scripts/
+
+# Test files
+test_*.py
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
